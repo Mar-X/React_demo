@@ -1,9 +1,22 @@
+/*eslint-disable*/
+function test() {
+    return true
+};
 import React, { Component } from 'react';
 // import logo from './logo.svg';
 import './App.css';
 
+// eslint-disable-next-line
+import { BrowserRouter as Router, Route, NavLink, Switch } from 'react-router-dom';
+
 // 每次引入要加./在src当前文件下开始查找
 import Home from './pages/Home/Home';
+import News from './pages/News/News'; 
+import Course from './pages/Course/Course'; 
+import JoinUs from './pages/JoinUs/JoinUs';
+
+
+
 
 // 创建App继承Component中的属性
 //注意：1、jsx语法中，有且只有一个容器
@@ -154,6 +167,24 @@ class App extends Component {
 
 		return (
 			<div className="App">
+				<div>
+					<header>
+						<nav>
+							<ul>
+								<li><NavLink exact to="/">首页</NavLink></li>
+								<li><NavLink to="/news">新闻</NavLink></li>
+								<li><NavLink to='/course'>课程</NavLink></li>
+								<li><NavLink to="/joinUs">加入我们</NavLink></li>
+							</ul>
+						</nav>
+					</header>
+					<Switch>
+					<Route exact path="/" component={Home}/>
+					<Route path="/news" component={News}/>
+					<Route path="/course" component={Course}/>
+					<Route path="/joinUs" render={(props) => <JoinUs {...props}/>}/>
+					</Switch>
+				</div>
 				<h1 className={classs.join(' ')}>我是动态样式</h1>
 				<button onClick={this.stateType.bind(this, '啦啦')}>变身1</button>
 				<button onClick={() => this.stateType('哈哈')}>变身2</button>

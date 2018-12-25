@@ -1,9 +1,19 @@
-import React from 'react';
+import React, { Component } from 'react'
+import {
+	BrowserRouter as Router,
+	Route,
+	Switch,
+	Redirect
+} from 'react-router-dom'
+
 import './Home.css';
+
+import Header from '../../components/Header/Header'
 
 const home = (props) => {
 	return (
-		<div>
+		<div className="home">
+			<Header />	
 			<div> 首页 </div>
 			<p className="bgclass" onClick={props.myHomeType}>
 				我的名字叫 {props.name}, 年纪有 {props.num}岁
