@@ -3,6 +3,9 @@ import {
 	Route,
 	NavLink
 } from 'react-router-dom';
+
+import Header from '../../components/Header/Header';
+
 import './Course.css';
 
 class Course extends Component {
@@ -21,4 +24,4 @@ class Course extends Component {
     }
 }
 
-export default course;
+export default Course;

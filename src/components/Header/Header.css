@@ -1,8 +1,36 @@
-h1{
-    color: pink;
+/* $fontGrayColor: #666;
+$lineGrayColor: #ccc;
+$bgGrayColor: #eee;
+$fontSize: 16px; */
+
+body {
+	font-size: #666;
+	margin: 0;
+	padding: 0;
 }
-button {
-    width: 100px;
-    height: 50px;
-    background:pink;
+
+header ul{
+	text-align: right;
+	background-color: #eee;
+	margin: 0;
+}
+header ul li {
+	display: inline-block;
+	list-style: none;
+	text-align: center;
+	border-left: 1px solid  #ccc;
+}
+header a {
+	text-decoration: none;
+	color: #666;
+	font-size: 1.5rem;
+	padding: 0.8em 2em;
+	display: block;
+}
+header a:hover {
+	color: #000;
+}
+header a.active {
+	background-color: #666;
+	color: #fff;
 }

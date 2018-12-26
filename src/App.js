@@ -1,22 +1,10 @@
-/*eslint-disable*/
-function test() {
-    return true
-};
 import React, { Component } from 'react';
 // import logo from './logo.svg';
 import './App.css';
 
-// eslint-disable-next-line
-import { BrowserRouter as Router, Route, NavLink, Switch } from 'react-router-dom';
 
 // 每次引入要加./在src当前文件下开始查找
 import Home from './pages/Home/Home';
-import News from './pages/News/News'; 
-import Course from './pages/Course/Course'; 
-import JoinUs from './pages/JoinUs/JoinUs';
-
-
-
 
 // 创建App继承Component中的属性
 //注意：1、jsx语法中，有且只有一个容器

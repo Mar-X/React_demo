@@ -15,6 +15,7 @@ import { BrowserRouter as Router, Route, NavLink, Switch } from 'react-router-do
 
 import Home from './pages/Home/Home';
 import News from './pages/News/News'; 
+import NewsDetail from './pages/News/NewsDetail';
 import Course from './pages/Course/Course'; 
 import JoinUs from './pages/JoinUs/JoinUs';
 import Login from './pages/Login/Login';
@@ -29,9 +30,9 @@ const App = () => (
               <Route path="/news/:id" component={NewsDetail}/>
               <Route path="/course" component={Course}/>
               <Route path="/joinUs" render={(props) => <JoinUs {...props}/>}/>
-              <Route path="/error" render={(props) => <div><h1>404 Not Found!</h1></div>}/>
-              <Route path="*" render={(props) => <Redirect to='/error'/>}/>
-            </Switch>
+              {/* <Route path="/error" render={(props) => <div><h1>404 Not Found!</h1></div>}/> */}
+              {/* <Route path="*" render={(props) => <Redirect to='/error'/>}/> */}
+              </Switch>
         </div>
     </Router>
 )
