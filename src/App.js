@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 // import logo from './logo.svg';
 import './App.css';
 
-
 // 每次引入要加./在src当前文件下开始查找
 import Home from './pages/Home/Home';
 
@@ -10,6 +9,9 @@ import Home from './pages/Home/Home';
 //注意：1、jsx语法中，有且只有一个容器
 //2、jsx语法的注释为 {/*注释*/}
 class App extends Component {
+
+
+
 	// state使用管理状态，但只能在继承了Component的下面使用
 	state = {
 		Homes: [
